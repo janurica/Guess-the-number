@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the number Game</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload="init()">
+  <main>
+    <div id="welcomeScreen" class="">
+      <h2>Gues the random number <br> between 1-100</h2>
+      <section>
+        <p>Select difficulty setting:</p>
+        <div class="button-wrapper">
+          <button onclick="easyMode()">Easy: 10 attempts</button>
+          <button onclick="hardMode()">Hard: 5 attempts</button>
+        </div>
+      </section>
+    </div>
+    <div id="gameArea" class="">
+    <button id="newGameButton" type="button" name="button">NEW GAME:</button>
+    <section>
+      <h3 id="textOutput">Your Guess:</h3>
+      <input id="inputBox" type="number" value="Number" main="1" max="100" onchange="compareGuess()">
+    </section>
+    <section>
+      <p>Current range:</p>
+      <span id="rangeOutput">1-100</span>
+      <div id="range"class="">
+        <span id="low"></span>
+        <span id="space"></span>
+        <span id="high"></span>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="info">
+        <p>Numbers of previous attempts:</p>
+        <span id="attempts">0</span>
+      </div>
+      <div class="info">
+        <p>Your previous guesses:</p>
+        <span id="guesses">-</span>
+      </div>
+    </section>
+    </div>
+  </main>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+  </body>
+</html>
